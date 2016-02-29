@@ -1,0 +1,101 @@
+<!DOCUMENT html>
+<html lang="en">
+<head>
+    <title>My project</title>
+    <style>
+
+body {
+	background: -webkit-linear-gradient(rgba(76,175,80,0.1), rgb(76,175,80));
+}
+
+.form {
+	padding: 30px;
+	margin: 30px auto;
+	border: 3px solid green;
+	border-radius: 30px;
+	background-color: lightgreen;
+	width: 50%;
+	box-sizing: border-box;
+
+}
+
+h1 {
+	font-family: Cursive, sans-serif;
+}
+h2 {
+	color: #004d00;
+	font-family: Cursive, sans-serif;
+}
+
+select {
+	background: rgba(74, 125, 178, 0.2);
+	border-radius: 5px;
+	border: 1px solid;
+}
+progress {
+	width: 200px;
+	height: 10px;
+	margin: 3px;
+	-webkit-appearance: none;
+	border: none;
+}
+progress::-webkit-progress-bar {
+	background: whitesmoke;
+	border-radius: 50px;
+	padding: 1px;
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.2);
+}
+
+progress::-webkit-progress-value {
+	border-radius: 50px;
+	box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+	background: #008ae6;
+}
+
+    
+    </style>
+<head>
+<body>
+	<div class="form">
+		<header>
+			<h1><mark>L.Flori</mark></h1>
+			<nav class="menu">
+				<a href="#">One</a>
+				<a href="#">Two</a>
+				<a href="#">Three</a>
+				<a href="#"><mark>Your Choice</mark></a>
+			</nav>
+		</header>
+		<section>
+			<h2>Favourite Foods</h2>
+			<ul>
+				<li><mark>Fruits</mark></li>
+				<li><mark>Chocolate</mark></li>
+				<li><mark>Pizza</mark></li>
+				<li><mark>Soup</mark></li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Achievements</h2>
+			<p>Pregress in this course<em>(100%)</em><progress value="1">
+			</progress></p>
+			<p>Pregress in the Specialization capstone<em>(20%)</em><progress value="20" max="100"></progress></p>
+			<p>Pregress in the life goals<em>(67%)</em><progress value="67" max="100">
+			</progress></p>
+		</section>
+
+		<section>
+			<h2>More About Me</h2>
+			<details open>
+				<summary><b>My childhood</b></summary>					 <p><mark>I grew up in Romania. I lived near Muddy Volcanoes and I really miss those lovely landscapes.</mark></p>
+			</details>
+		</section>
+		<footer>
+			<img src = "http://www.intro-webdesign.com/images/newlogo.png">
+			<p> This page was created by <mark>L.F.</mark> & Colleen van Lent. To learn more about web design, visit <a href = "#">Intro to Web Design</a></p>
+		</footer>
+	</div>
+
+</body>
+</html>
