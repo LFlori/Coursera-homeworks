@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+       
+var colors, targetIndex, colorsLength, count = 0, finished = false,guessInput, target, j, isGuessInColors = false;
+
+colors = ["blue", "cyan", "gold", "green", "magenta", "orange", "red", "white", "yellow"];
+
+colorsLength = colors.length;
+function doGame(){
+    targetIndex = parseInt(Math.random() * (colors.length - 1));
+    target = colors[targetIndex];
+
+    console.log(targetIndex);
+    console.log(target);
+
+    while(finished == false ){
+        guessInput = prompt("I am thinking of one of these colors:\n\n" + colors + "\n\nWhat color I am thinking of?");
+        count++;
+        finished = checkGuess();
+    }
+}
+function checkGuess(){
+    isGuessInColors = false;
+    for(j = 0; j < colorsLength; j++) {
+        if(guessInput == colors[j]){
+            isGuessInColors = true;
+        }
+    }
+
+    console.log(target);
+    console.log(guessInput > target);
+    console.log(guessInput < target);
+
+    if(!isGuessInColors){
+        alert("I don't recognize!");
+        return false;
+    }
+    else if(guessInput > target) {
+        alert("Your color is higher!");
+        return false;
+    }
+    else if(guessInput < target) {
+        alert("Your color is lower!");
+        return false;
+    }
+    else {
+        document.body.style.backgroundColor = guessInput;
+        alert("Congratulations! You guessed " + count + " attempts!");
+        return true;
+    }
+}
+
+doGame();
+
+    </script>
+    </body>
+</html>
